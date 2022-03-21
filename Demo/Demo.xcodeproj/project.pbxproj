@@ -14,6 +14,7 @@
 		65897C3A27E7A44400F55177 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65897C3927E7A44400F55177 /* DemoUITests.swift */; };
 		65897C3C27E7A44400F55177 /* DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65897C3B27E7A44400F55177 /* DemoUITestsLaunchTests.swift */; };
 		65897C4927E7CC2C00F55177 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65897C4827E7CC2C00F55177 /* Extensions.swift */; };
+		65897C4D27E87B1E00F55177 /* ClickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65897C4C27E87B1E00F55177 /* ClickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		65897C3927E7A44400F55177 /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		65897C3B27E7A44400F55177 /* DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		65897C4827E7CC2C00F55177 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		65897C4C27E87B1E00F55177 /* ClickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				65897C1827E7A43F00F55177 /* AppDelegate.swift */,
 				65897C1C27E7A43F00F55177 /* ViewController.swift */,
 				65897C4827E7CC2C00F55177 /* Extensions.swift */,
+				65897C4C27E87B1E00F55177 /* ClickerViewController.swift */,
 				65897C2127E7A44300F55177 /* Assets.xcassets */,
 				65897C2627E7A44300F55177 /* Info.plist */,
 			);
@@ -252,6 +255,7 @@
 			files = (
 				65897C1D27E7A43F00F55177 /* ViewController.swift in Sources */,
 				65897C4927E7CC2C00F55177 /* Extensions.swift in Sources */,
+				65897C4D27E87B1E00F55177 /* ClickerViewController.swift in Sources */,
 				65897C1927E7A43F00F55177 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

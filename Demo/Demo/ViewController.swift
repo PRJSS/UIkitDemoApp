@@ -16,8 +16,6 @@ class ViewController: UIViewController {
         button.backgroundColor = .red
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 10
-        button.tag = 1
-        
         return button
     }()
     
@@ -42,6 +40,7 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(buttonActionDown), for: .touchDown)
         button.addTarget(self, action: #selector(buttonActionUpOutside), for: .touchUpOutside)
         button.addTarget(self, action: #selector(buttonActionUpInside), for: .touchUpInside)
+        transitButton.addTarget(self, action: #selector(didTapTransitButton), for: .touchUpInside)
         
         
     }
@@ -49,7 +48,7 @@ class ViewController: UIViewController {
     private func setupSubviews() {
         view.addSubview(someLabel)
         view.addSubview(button)
-        //view.addSubview(transitButton)
+        view.addSubview(transitButton)
         
         /// Constraints
         let margins = view.layoutMarginsGuide
@@ -62,8 +61,8 @@ class ViewController: UIViewController {
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.widthAnchor.constraint(equalTo: margins.widthAnchor, constant: -50),
             button.heightAnchor.constraint(equalTo: margins.heightAnchor, constant: -400),
-//            transitButton.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -30),
-//            transitButton.centerXAnchor.constraint(equalTo: margins.centerXAnchor)
+            transitButton.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -30),
+            transitButton.centerXAnchor.constraint(equalTo: margins.centerXAnchor)
         ])
     }
     
@@ -71,10 +70,9 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 0.1, delay: 0, animations:{
             self.button.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             self.button.backgroundColor = .blue
-            let generator = UIImpactFeedbackGenerator(style: .medium)
+            let generator = UIImpactFeedbackGenerator(style: .light)
             generator.impactOccurred()
         })
-        
     }
     
     @objc func buttonActionUpOutside() {
@@ -93,6 +91,12 @@ class ViewController: UIViewController {
             let generator = UIImpactFeedbackGenerator(style: .light)
             generator.impactOccurred()
         })
+    }
+    
+    @objc func didTapTransitButton() {
+        let vc = ClickerViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        print("transit")
     }
     
 }
