@@ -67,7 +67,7 @@ class ViewController: UIViewController {
     }
     
     @objc func buttonActionDown() {
-        UIView.animate(withDuration: 0.1, delay: 0, animations:{
+        UIView.animate(withDuration: 0.08, delay: 0, animations:{
             self.button.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             self.button.backgroundColor = .blue
             let generator = UIImpactFeedbackGenerator(style: .light)
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
     }
     
     @objc func buttonActionUpOutside() {
-        UIView.animate(withDuration: 0.1, delay: 0, animations:{
+        UIView.animate(withDuration: 0.08, delay: 0, animations:{
             self.button.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             self.button.backgroundColor = .red
             let generator = UIImpactFeedbackGenerator(style: .light)
@@ -85,7 +85,7 @@ class ViewController: UIViewController {
     }
     
     @objc func buttonActionUpInside() {
-        UIView.animate(withDuration: 0.1, delay: 0, animations:{
+        UIView.animate(withDuration: 0.08, delay: 0, animations:{
             self.button.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             self.button.backgroundColor = .red
             let generator = UIImpactFeedbackGenerator(style: .light)

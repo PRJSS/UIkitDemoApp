@@ -10,8 +10,10 @@ import UIKit
 
 class ClickerViewController: UIViewController {
     
+    var clickCounter = 0
+    
     let clickerButton: UIButton = {
-       let button = UIButton()
+        let button = UIButton()
         button.setTitle("TAP HERE", for: .normal)
         button.backgroundColor = .systemBackground
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -52,9 +54,10 @@ class ClickerViewController: UIViewController {
     }
     
     @objc func didTapClicker() {
-        UIView.animate(withDuration: 0.1, delay: 0, animations:{
-            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            let generator = UIImpactFeedbackGenerator(style: .light)
             generator.impactOccurred()
-        })
+            self.clickCounter += 1
+            self.clickerButton.setTitle(String(self.clickCounter), for: .normal)
+        
     }
 }
