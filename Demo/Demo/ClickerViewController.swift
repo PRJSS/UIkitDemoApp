@@ -25,6 +25,7 @@ class ClickerViewController: UIViewController {
     }()
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -54,10 +55,26 @@ class ClickerViewController: UIViewController {
     }
     
     @objc func didTapClicker() {
-            let generator = UIImpactFeedbackGenerator(style: .light)
-            generator.impactOccurred()
-            self.clickCounter += 1
-            self.clickerButton.setTitle(String(self.clickCounter), for: .normal)
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
+        self.clickCounter += 1
+        self.clickerButton.setTitle(String(self.clickCounter), for: .normal)
+        osuCircleGenerator()
         
+    }
+    
+    private func osuCircleGenerator() {
+        let osuButton: UIButton = {
+            let button = UIButton()
+            button.backgroundColor = .gray
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.layer.cornerRadius = 45
+            button.layer.borderWidth = 2
+            button.layer.borderColor = UIColor.white.cgColor
+            return button
+        }()
+        self.view.addSubview(osuButton)
+        osuButton.frame = CGRect(x: 200, y: 200, width: 100, height: 100)
+
     }
 }

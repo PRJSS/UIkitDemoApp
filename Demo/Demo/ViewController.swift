@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         let button = UIButton()
         button.setTitle("кликер ->", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(UIColor.label, for: .normal)
         return button
     }()
     
@@ -36,6 +37,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .systemBackground
         setupSubviews()
         button.addTarget(self, action: #selector(buttonActionDown), for: .touchDown)
         button.addTarget(self, action: #selector(buttonActionUpOutside), for: .touchUpOutside)
@@ -96,7 +98,6 @@ class ViewController: UIViewController {
     @objc func didTapTransitButton() {
         let vc = ClickerViewController()
         navigationController?.pushViewController(vc, animated: true)
-        print("transit")
     }
     
 }
